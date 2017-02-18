@@ -3,6 +3,10 @@
 <h1>Quiz 2 KAY</h1>
 
 <table>
+
+
+<!--
+
   <thead>
     <tr>
       <th>user_id</th>
@@ -12,13 +16,43 @@
   </thead>
 
   <tbody>
-    <% @question_sets.each do |question_sets| %>
+    <% @question_sets.each do |qs| %>
       <tr>
-        <td><%= question_sets.user_id %></td>
-        <td><%= question_sets.question_id %></td>
+        <td><%= qs.user_id %></td>
+        <td><%= qs.question_id %></td>
+        <td><%= qs.description %></td>
+        <td><%= qs.optionA %></td>
+        <td><%= qs.optionB %></td>
+        <td><%= qs.optionC %></td>
+        <td><%= qs.optionD %></td>
       </tr>
     <% end %>
   </tbody>
+</table>
+-->
+<!-- ------------------------------- -->
+
+
+<table>
+  <% @question_sets.each do |qs| %>
+    <tr>
+      <td>Pertanyaan : </td>
+      <td colspan="4"><%= qs.description %></td>
+    </tr>
+
+    <tr>
+      <td>Jawaban : </td>
+      <td><%= qs.optionA %></td>
+      <td><%= qs.optionB %></td>
+      <td><%= qs.optionC %></td>
+      <td><%= qs.optionD %></td>
+    </tr>
+
+    <tr>
+      <td colspan="5">&nbsp;</td>
+    </tr>
+
+  <% end %>
 </table>
 
 <br>

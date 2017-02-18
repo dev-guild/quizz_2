@@ -10,9 +10,23 @@ class QuestionsetsController < ApplicationController
 
   	QuestionSet.joins(:question)
 
+  	Category.joins(:posts).collect{|category| category.posts.map{|post| post.attributes.merge(category.attributes) } }
+
+
+	QuestionSet.joins(:question).collect{}
+
+
+	@comments = Comment.joins(:user)
+			.select("comments.*, users.first_name")
+			.where(study_id: @study.id)
+
+
+			QuestionSet.joins(:question).select("question_sets.*, questions.description")
+
 =end
 
-    @question_sets = QuestionSet.all
+    #@question_sets = QuestionSet.all
+    @question_sets = QuestionSet.joins(:question).select("question_sets.*, questions.*")
 
   end
 end
