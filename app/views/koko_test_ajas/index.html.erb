@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Koko Test Ajas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @koko_test_ajas.each do |koko_test_aja| %>
+      <tr>
+        <td><%= koko_test_aja.name %></td>
+        <td><%= koko_test_aja.age %></td>
+        <td><%= link_to 'Show', koko_test_aja %></td>
+        <td><%= link_to 'Edit', edit_koko_test_aja_path(koko_test_aja) %></td>
+        <td><%= link_to 'Destroy', koko_test_aja, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Koko Test Aja', new_koko_test_aja_path %>

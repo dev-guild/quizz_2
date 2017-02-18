@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @badge.name %>
+</p>
+
+<p>
+  <strong>Min:</strong>
+  <%= @badge.min %>
+</p>
+
+<p>
+  <strong>Max:</strong>
+  <%= @badge.max %>
+</p>
+
+<%= link_to 'Edit', edit_badge_path(@badge) %> |
+<%= link_to 'Back', badges_path %>
