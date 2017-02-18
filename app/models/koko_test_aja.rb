@@ -1,0 +1,2 @@
+class KokoTestAja < ApplicationRecord
+end

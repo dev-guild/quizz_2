@@ -1,0 +1,1 @@
+json.partial! "koko_test_ajas/koko_test_aja", koko_test_aja: @koko_test_aja

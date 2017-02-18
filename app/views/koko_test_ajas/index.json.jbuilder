@@ -1,0 +1,1 @@
+json.array! @koko_test_ajas, partial: 'koko_test_ajas/koko_test_aja', as: :koko_test_aja
